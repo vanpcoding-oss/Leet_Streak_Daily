@@ -5,11 +5,11 @@ class Solution {
         map.put(']','[');
         map.put('}','{');
         Stack<Character> stack=new Stack<>();
-        for(char ch:s.toCharArray())   // ()->['(',')'];
+        for(char ch:s.toCharArray())
         {
             if(map.containsKey(ch))
             {
-                if(!stack.isEmpty() && stack.peek()==map.get(ch))
+                if(!stack.isEmpty() && stack.peek()==map.get(ch)) ////   "("->")"
                 {
                     stack.pop();
                 }
